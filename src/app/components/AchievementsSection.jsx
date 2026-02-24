@@ -11,36 +11,37 @@ const AnimatedNumbers = dynamic(
 
 const achievementsList = [
   {
-    metric: "Projects",
-    value: "100",
+    metric: "Technologies",
+    value: "10",
     postfix: "+",
   },
   {
-    prefix: "~",
-    metric: "Users",
-    value: "100,000",
+    metric: "Projects",
+    value: "10",
+    postfix: "+",
   },
   {
-    metric: "Awards",
-    value: "7",
+    metric: "Coffee",
+    value: "999",
+    postfix: "+",
   },
   {
     metric: "Years",
-    value: "5",
+    value: "4",
   },
 ];
 
 const AchievementsSection = () => {
   return (
-    <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
+    <div className="pt-12 px-4 xl:gap-16 sm:py-16 xl:px-16">
+      <div className="sm:border-[#eeeded] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between shadow-lg hover:shadow-2xl transition-shadow duration-300">
         {achievementsList.map((achievement, index) => {
           return (
             <div
               key={index}
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
             >
-              <h2 className="text-white text-4xl font-bold flex flex-row">
+              <h2 className="text-gray-600 text-4xl font-bold flex flex-row">
                 {achievement.prefix}
                 <AnimatedNumbers
                   includeComma
@@ -57,7 +58,7 @@ const AchievementsSection = () => {
                 />
                 {achievement.postfix}
               </h2>
-              <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+              <p className="text-[#757779] text-base">{achievement.metric}</p>
             </div>
           );
         })}

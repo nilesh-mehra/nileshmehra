@@ -7,70 +7,78 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+    <section className="lg:py-16 flex flex-col md:flex-row bg-transparent">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+          className="order-2 md:order-1 col-span-12 sm:col-span-8 text-center sm:text-left flex flex-col justify-center lg:pt-0 pt-5"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Hello, I&apos;m{" "}
+          <h1 className="text-gray-900 mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-tight font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-neutral-800">
+              Hi, I&apos;m
             </span>
-            <br></br>
+            <br />
             <TypeAnimation
               sequence={[
-                "Judy",
+                "Nilesh Mehra",
+                1000,
+                "MERN Developer",
+                1000,
+                "Frontend Engineer",
                 1000,
                 "Web Developer",
                 1000,
-                "Mobile Developer",
-                1000,
-                "UI/UX Designer",
+                "UI/UX Developer",
                 1000,
               ]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
+              className="bg-clip-text text-transparent bg-gradient-to-r from-zinc-700 via-zinc-800 to-blue-800"
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
+          <p className="text-gray-600 text-base sm:text-lg mb-6 lg:text-xl">
+            Building modern web experiences with clean code and intuitive design.
           </p>
-          <div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
             <Link
               href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
+              className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium hover:from-purple-600 hover:to-pink-600 transition w-full sm:w-auto text-center"
             >
-              Hire Me
+              Connect
             </Link>
             <Link
-              href="/"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
+              href="#projects"
+              className="px-6 py-3 rounded-full border border-gray-300 text-gray-800 font-medium hover:bg-gray-100 transition w-full sm:w-auto text-center"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
-              </span>
+              View Projects
             </Link>
           </div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          initial={{ opacity: 0, y: 50, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 80 }}
+          className="order-1 md:order-2 col-span-12 sm:col-span-4 flex justify-center"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-            <Image
-              src="/images/hero-image.png"
-              alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
-            />
+          <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">
+            <div className="absolute w-full h-full rounded-full bg-gradient-to-tr from-blue-400 via-purple-400 to-pink-400 opacity-20 filter blur-3xl z-0"></div>
+
+            <motion.div
+              whileHover={{ scale: 1.05, rotate: 0 }}
+              transition={{ duration: 0.5 }}
+              className="relative w-full h-full rounded-full overflow-hidden shadow-2xl z-10"
+            >
+              <Image
+                src="/images/hero-img.png"
+                alt="Hero Image"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover w-full h-full"
+                width={400}
+                height={400}
+              />
+            </motion.div>
           </div>
         </motion.div>
       </div>
