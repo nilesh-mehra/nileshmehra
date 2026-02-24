@@ -16,7 +16,6 @@ const EmailSection = () => {
       message: e.target.message.value,
     };
     const JSONdata = JSON.stringify(data);
-    // const endpoint = "/api/send";  for /resend web app
     const endpoint = "https://formspree.io/f/xaqdabrg";
 
     const options = {
