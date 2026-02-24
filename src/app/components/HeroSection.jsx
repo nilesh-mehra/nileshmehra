@@ -71,13 +71,7 @@ const HeroSection = () => {
               transition={{ duration: 0.5 }}
               className="relative w-full h-full rounded-full overflow-hidden shadow-2xl z-10"
             >
-              <Image
-                src="/images/hero-img.png"
-                alt="Hero Image"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover w-full h-full"
-                width={400}
-                height={400}
-              />
+              <Image src="/images/hero-img.png" alt="Hero" width={1200} height={800} priority />
             </motion.div>
           </div>
         </motion.div>
