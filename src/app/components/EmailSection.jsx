@@ -16,7 +16,8 @@ const EmailSection = () => {
       message: e.target.message.value,
     };
     const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
+    // const endpoint = "/api/send";  for /resend web app
+    const endpoint = "https://formspree.io/f/xaqdabrg";
 
     const options = {
       method: "POST",
@@ -47,12 +48,15 @@ const EmailSection = () => {
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className="socials flex flex-row items-center gap-2 mt-5">
           <Link href="https://github.com/nilesh-mehra/">
-            <Image src={GithubIcon} alt="Github Icon" className="w-10 h-10 filter brightness-[0.25]"/>
+            <Image src={GithubIcon} alt="Github Icon" className="w-10 h-10 filter brightness-[0.60]"/>
           </Link>
           <Link href="https://www.linkedin.com/in/nilesh-mehra-99692b387/">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" className="w-10 h-10 filter brightness-[0.25]" />
+            <Image src={LinkedinIcon} alt="Linkedin Icon" className="w-10 h-10 filter brightness-[0.60]" />
+          </Link>
+           <Link href="mailto:nilesh@example.com" className="text-gray-500 hover:text-blue-500 text-ms">
+          <span className="text-gray-600 ">| </span>nilesh.mehra.dev@gmail.com
           </Link>
         </div>
       </div>
