@@ -11,7 +11,7 @@ export default function GetMeAChai() {
 
         <p className="text-gray-400 max-w-3xl mx-auto">
           This project is a clone built for learning purposes while exploring the MERN stack.
-          The original concept and guidance were followed from CodeWithHarry's tutorial series.
+          The original concept and guidance were followed from CodeWithHarry&apos;s tutorial series.
           This is not my original product idea.
         </p>
       </section>
@@ -96,7 +96,7 @@ export default function GetMeAChai() {
         <h3 className="text-2xl font-semibold">Credits</h3>
 
         <p className="text-gray-400 max-w-2xl mx-auto">
-          Built while learning from CodeWithHarry's YouTube MERN series.
+          Built while learning from CodeWithHarry&apos;s YouTube MERN series.
           Special credit to Naman Khandelwal for the original project concept.
           This project was created strictly for learning and educational purposes.
         </p>

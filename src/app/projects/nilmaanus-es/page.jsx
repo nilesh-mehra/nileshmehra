@@ -65,7 +65,7 @@ export default function NilmaanusPage() {
           <h2 className="text-3xl font-semibold mb-4">Organizer Dashboard</h2>
           <p className="text-gray-400">
             Organizers create tournaments, check tournaments created and update
-            tournament details and update results in ...real-time "upcoming"... with structured control panels.
+            tournament details and update results in ...real-time &quot;upcoming&quot;... with structured control panels.
           </p>
         </div>
 

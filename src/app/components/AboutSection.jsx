@@ -113,9 +113,9 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-gray-700 mb-6">About Me</h2>
           <p className="text-justify text-gray-600 lg:text-lg">
-            I’m a full stack web developer who loves turning ideas into interactive and responsive web apps — basically, I make websites do cool stuff while keeping them clean and user-friendly. I work with tools like JavaScript, React, Next.js, Node.js, Express, MongoDB, Tailwind CSS, and Bootstrap, so I can build everything from a sleek landing page to a full-featured web application.  
+            I&apos;m a full stack web developer who loves turning ideas into interactive and responsive web apps — basically, I make websites do cool stuff while keeping them clean and user-friendly. I work with tools like JavaScript, React, Next.js, Node.js, Express, MongoDB, Tailwind CSS, and Bootstrap, so I can build everything from a sleek landing page to a full-featured web application.  
             I enjoy solving challenges and figuring out the best way to make things work smoothly, all while keeping the experience simple and enjoyable for users. Collaborating with awesome teams, brainstorming ideas, and seeing a project grow from concept to something people love is what keeps me excited about coding every day.  
-            And yes… I might drink a little too much coffee ☕ along the way, but it’s all worth it when the app just clicks.
+            And yes… I might drink a little too much coffee ☕ along the way, but it&apos;s all worth it when the app just clicks.
           </p>
 
           <div className="flex flex-row justify-start mt-12 space-x-4 overflow-x-auto">

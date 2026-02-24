@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link"
+import Image from "next/image"
 
 const ProjectDescription = () => {
     return (
@@ -12,11 +13,8 @@ const ProjectDescription = () => {
             </p>
 
             <div className="w-full flex justify-center mb-8">
-                <img 
-                    src="/images/projects/passop/ui.png" 
-                    alt="Password Manager UI" 
-                    className="w-full max-w-md lg:max-w-4xl rounded-xl shadow-lg"
-                />
+                <Image src="/images/projects/passop/ui.png" alt="Password Manager UI" width={1200} height={800} className="w-full max-w-md lg:max-w-4xl rounded-xl shadow-lg"
+/>
             </div>
 
             <div className="w-full lg:w-3/4 text-gray-800">
