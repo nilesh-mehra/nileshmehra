@@ -49,7 +49,7 @@ const HeroSection = () => {
             >
               Connect
             </Link>
-            <Link href="/resume.pdf" target="_blank" className="px-6 py-3 rounded-full border border-gray-300 text-gray-800 font-medium hover:bg-gray-100 transition w-full sm:w-auto text-center" >
+            <Link href="/Nilesh_Mehra_Resume.pdf" target="_blank" className="px-6 py-3 rounded-full border border-gray-300 text-gray-800 font-medium hover:bg-gray-100 transition w-full sm:w-auto text-center" >
             View Resume
             </Link>
           </div>
