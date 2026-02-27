@@ -12,7 +12,7 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
           className="order-2 md:order-1 col-span-12 sm:col-span-8 text-center sm:text-left flex flex-col justify-center lg:pt-0 pt-5"
         >
           <h1 className="text-gray-900 mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-tight font-extrabold">

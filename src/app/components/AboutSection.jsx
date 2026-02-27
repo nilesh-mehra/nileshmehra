@@ -1,6 +1,7 @@
 "use client";
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
+import {motion} from "framer-motion"
 import TabButton from "./TabButton";
 
 const TAB_DATA = [
@@ -25,7 +26,7 @@ const TAB_DATA = [
             key={skill.name}
             className="flex items-center gap-3 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full hover:scale-105 transition-transform duration-200"
           >
-            <img src={skill.src} alt={skill.name} className="w-6 h-6" />
+            <Image src={skill.src} alt={skill.name} width={24} height={24} />
             <span className="text-gray-800 dark:text-white font-medium">{skill.name}</span>
           </li>
         ))}
@@ -52,7 +53,7 @@ const TAB_DATA = [
             key={tool.name}
             className="flex items-center gap-3 bg-gray-100 dark:bg-gray-700 px-3 py-2 rounded-full hover:scale-105 transition-transform duration-200"
           >
-            <img src={tool.src} alt={tool.name} className="w-6 h-6 object-contain" />
+            <Image src={tool.src} alt={tool.name} width={24} height={24} className="object-contain" />
             <span className="text-gray-800 dark:text-white font-medium">{tool.name}</span>
           </li>
         ))}
@@ -111,14 +112,28 @@ const AboutSection = () => {
     <section className="text-gray-800 dark:text-white" id="about">
       <div className="py-8 px-4 xl:gap-16 pt-20 sm:pt-28 pb-24 sm:pb-24 xl:px-16">
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-gray-700 mb-6">About Me</h2>
-          <p className="text-justify text-gray-600 lg:text-lg">
+          <motion.h2 className="text-4xl font-bold text-gray-700 mb-6"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          >About Me</motion.h2>
+          <motion.p className="text-justify text-gray-600 lg:text-lg"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true}}>
             I&apos;m a full stack web developer who loves turning ideas into interactive and responsive web apps — basically, I make websites do cool stuff while keeping them clean and user-friendly. I work with tools like JavaScript, React, Next.js, Node.js, Express, MongoDB, Tailwind CSS, and Bootstrap, so I can build everything from a sleek landing page to a full-featured web application.  
             I enjoy solving challenges and figuring out the best way to make things work smoothly, all while keeping the experience simple and enjoyable for users. Collaborating with awesome teams, brainstorming ideas, and seeing a project grow from concept to something people love is what keeps me excited about coding every day.  
             And yes… I might drink a little too much coffee ☕ along the way, but it&apos;s all worth it when the app just clicks.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-row justify-start mt-12 space-x-4 overflow-x-auto">
+          <motion.div className="flex flex-row justify-start mt-12 space-x-4 overflow-x-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true}}
+          >
             {TAB_DATA.map((t) => (
               <TabButton
                 key={t.id}
@@ -128,11 +143,16 @@ const AboutSection = () => {
                 {t.title}
               </TabButton>
             ))}
-          </div>
+          </motion.div>
 
-          <div className="mt-8">
+          <motion.div className="mt-8"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true}}
+          >
             {TAB_DATA.find((t) => t.id === tab)?.content}
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="w-full rounded-full h-1 bg-gray-500 px-10"></div>

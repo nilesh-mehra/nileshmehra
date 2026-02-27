@@ -61,11 +61,21 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="px-4 md:px-12 py-12">
-      <h2 className="text-center text-4xl font-bold text-gray-700 pt-12 mb-12">
+      <motion.h2 className="text-center text-4xl font-bold text-gray-700 pt-12 mb-12"
+          initial={{ opacity: 0, y:60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true}}
+      >
         My Projects
-      </h2>
+      </motion.h2>
 
-      <div className="flex flex-row justify-center items-center gap-4 mb-8">
+      <motion.div className="flex flex-row justify-center items-center gap-4 mb-8"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true}}
+      >
         {["All", "Full Stack",  "Utility"].map((t) => (
           <ProjectTag
             key={t}
@@ -74,7 +84,7 @@ const ProjectsSection = () => {
             onClick={handleTagChange}
           />
         ))}
-      </div>
+      </motion.div>
       <ul
         ref={ref}
         className="grid md:grid-cols-3 gap-8 md:gap-12 justify-items-center"
@@ -85,7 +95,7 @@ const ProjectsSection = () => {
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.2 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <ProjectCard
               title={project.title}

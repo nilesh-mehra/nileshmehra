@@ -14,7 +14,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-20 flex items-center bg-[rgba(255,255,255,0.97)] shadow-md border-b border-gray-200">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-20 flex items-center bg-[rgba(253,253,253,0.97)] shadow-md border-b border-gray-200">
       <div className="container mx-auto flex flex-wrap items-center justify-between px-6 py-3">
         <Link href="/" className="text-2xl md:text-3xl text-gray-600 hover:text-indigo-500 transition" >
           Nilesh Mehra
