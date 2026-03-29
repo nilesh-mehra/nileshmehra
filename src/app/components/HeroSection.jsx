@@ -40,8 +40,9 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-gray-600 text-base sm:text-lg mb-6 lg:text-xl">
-            Building modern web experiences with clean code and intuitive design.
+           I create fast, modern, and user-focused web experiences that help businesses grow and look professional.
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
             <Link
               href="/#contact"

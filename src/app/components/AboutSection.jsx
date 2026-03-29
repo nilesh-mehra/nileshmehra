@@ -118,14 +118,25 @@ const AboutSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
           >About Me</motion.h2>
-          <motion.p className="text-justify text-gray-600 lg:text-lg"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true}}>
-            I&apos;m a full stack web developer who loves turning ideas into interactive and responsive web apps — basically, I make websites do cool stuff while keeping them clean and user-friendly. I work with tools like JavaScript, React, Next.js, Node.js, Express, MongoDB, Tailwind CSS, and Bootstrap, so I can build everything from a sleek landing page to a full-featured web application.  
-            I enjoy solving challenges and figuring out the best way to make things work smoothly, all while keeping the experience simple and enjoyable for users. Collaborating with awesome teams, brainstorming ideas, and seeing a project grow from concept to something people love is what keeps me excited about coding every day.  
-            And yes… I might drink a little too much coffee ☕ along the way, but it&apos;s all worth it when the app just clicks.
+          <motion.p
+            className="text-justify text-gray-600 lg:text-lg"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true }}
+          >
+            I&apos;m a full stack web developer specializing in building fast, modern and user-friendly web
+            applications using technologies like Next.js, React, Node.js, Express and MongoDB. I help
+            businesses and creators turn ideas into fully functional digital products with clean UI,
+            smooth performance and scalable architecture.
+            <br />
+            Whether it&apos;s a landing page, portfolio, business website or a complete full-stack platform,
+            I focus on writing clean code, creating meaningful user experiences and delivering results
+            that actually help businesses grow online. I enjoy understanding real-world problems and
+            building practical solutions that simply work.
+            <br />
+            My goal is always to combine good design, reliable development and performance-focused
+            engineering to create products that look great and feel effortless to use.
           </motion.p>
 
           <motion.div className="flex flex-row justify-start mt-12 space-x-4 overflow-x-auto"
